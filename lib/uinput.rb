@@ -1,5 +1,6 @@
 require "uinput/version"
 require 'ffi'
+require 'ffi/libc'
 
 module UInput
 
