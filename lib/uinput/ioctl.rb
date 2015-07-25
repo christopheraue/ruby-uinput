@@ -1,4 +1,4 @@
-module UInput
+module Uinput
   module Ioctl
     class_eval File.read(File.join(File.dirname(__FILE__), 'generated/ioctl.rb'))
 

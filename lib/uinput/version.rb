@@ -1,3 +1,3 @@
-module UInput
+module Uinput
   VERSION = "1.0.0"
 end

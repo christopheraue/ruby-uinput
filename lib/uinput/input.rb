@@ -5,7 +5,7 @@ class Timeval < FFI::Struct
   )
 end
 
-module UInput
+module Uinput
   class_eval File.read(File.join(File.dirname(__FILE__), 'generated/input.rb'))
 
   INPUT_IOCTL_BASE = ?E.ord

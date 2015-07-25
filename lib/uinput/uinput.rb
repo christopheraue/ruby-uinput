@@ -1,4 +1,4 @@
-module UInput
+module Uinput
   class_eval File.read(File.join(File.dirname(__FILE__), 'generated/uinput.rb'))
 
   UI_DEV_CREATE  = Ioctl.IO(UINPUT_IOCTL_BASE, 1)

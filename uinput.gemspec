@@ -5,12 +5,11 @@ require 'uinput/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "uinput"
-  spec.version       = UInput::VERSION
+  spec.version       = Uinput::VERSION
   spec.authors       = ["Christopher Aue"]
   spec.email         = ["mail@christopheraue.net"]
 
-  spec.summary       = %q{uinput ruby interface using ffi}
-  spec.description   = %q{uinput ruby interface using ffi}
+  spec.summary       = %q{Structs and Constants of input, ioctrl and uinput to use uinput with ruby.}
   spec.homepage      = "http://github.com/christopheraue/ruby-uinput"
   spec.license       = "MIT"
 
