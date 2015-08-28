@@ -3,6 +3,9 @@
 FFI Structs and Constants of to use uinput with ruby. Depends on the [linux_input](http://github.com/christopheraue/ruby-linux_input)
 gem.
 
+This is pretty low level. For a higher level and more user friendly abstraction
+have a look at the [uinput-device](http://github.com/christopheraue/ruby-uinput-device) gem.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -83,6 +86,12 @@ event[:type] = LinuxInput::EV_SYN
 event[:code] = LinuxInput::SYN_REPORT
 event[:value] = 0
 file.syswrite(event.pointer.read_bytes(event.size))
+```
+
+Destroying the device:
+
+```ruby
+file.ioctl(Uinput::UI_DEV_DESTROY, nil)
 ```
 
 ## (Re-)Compiling the interface on a linux machine
