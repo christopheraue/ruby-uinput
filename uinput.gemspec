@@ -5,7 +5,7 @@ require 'uinput/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "uinput"
-  spec.version       = Uinput::VERSION
+  spec.version       = LinuxInput::Uinput::VERSION
   spec.authors       = ["Christopher Aue"]
   spec.email         = ["mail@christopheraue.net"]
 
