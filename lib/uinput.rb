@@ -1,8 +1,8 @@
-require 'bundler/setup'
-require 'linux_input'
 require 'fcntl'
-require "uinput/version"
-require 'uinput/uinput.rb'
+require 'linux_input'
+
+require_relative "uinput/version"
+require_relative 'uinput/uinput.rb'
 
 Uinput = LinuxInput::Uinput
 
