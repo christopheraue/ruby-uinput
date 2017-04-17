@@ -1,4 +1,5 @@
-  UINPUT_VERSION = 4
+  #generated from UINPUT_VERSION = 5
+  UINPUT_MAX_NAME_SIZE = 80
   class UinputFfUpload < FFI::Struct
     layout(
            :request_id, :uint,
@@ -15,10 +16,22 @@
     )
   end
   UINPUT_IOCTL_BASE = ?U.ord
+  class UinputSetup < FFI::Struct
+    layout(
+           :id, InputId,
+           :name, [:char, 80],
+           :ff_effects_max, :uint
+    )
+  end
+  class UinputAbsSetup < FFI::Struct
+    layout(
+           :code, :ushort,
+           :absinfo, InputAbsinfo
+    )
+  end
   EV_UINPUT = 0x0101
   UI_FF_UPLOAD = 1
   UI_FF_ERASE = 2
-  UINPUT_MAX_NAME_SIZE = 80
   class UinputUserDev < FFI::Struct
     layout(
            :name, [:char, 80],

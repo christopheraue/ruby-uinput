@@ -17,4 +17,6 @@ typedef long long __s64;
 typedef unsigned long long __u64;
 #endif
 
+%rename("#generated from UINPUT_VERSION") UINPUT_VERSION;
+
 %include "linux/uinput.h"

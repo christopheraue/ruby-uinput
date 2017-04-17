@@ -4,6 +4,8 @@ module LinuxInput
 
     UI_DEV_CREATE  = Ioctl.IO(UINPUT_IOCTL_BASE, 1)
     UI_DEV_DESTROY = Ioctl.IO(UINPUT_IOCTL_BASE, 2)
+    UI_DEV_SETUP   = Ioctl.IOW(UINPUT_IOCTL_BASE, 3, UinputSetup.by_value)
+    UI_ABS_SETUP   = Ioctl.IOW(UINPUT_IOCTL_BASE, 4, UinputAbsSetup.by_value)
 
     UI_SET_EVBIT   = Ioctl.IOW(UINPUT_IOCTL_BASE, 100, :int)
     UI_SET_KEYBIT  = Ioctl.IOW(UINPUT_IOCTL_BASE, 101, :int)
@@ -22,7 +24,7 @@ module LinuxInput
     UI_BEGIN_FF_ERASE  = Ioctl.IOWR(UINPUT_IOCTL_BASE, 202, UinputFfErase.by_value)
     UI_END_FF_ERASE    = Ioctl.IOW(UINPUT_IOCTL_BASE,  203, UinputFfErase.by_value)
 
-    def self.UI_GET_SYSNAME(len) Ioctl.IOC(Ioctl::IOC_READ, UINPUT_IOCTL_BASE, 300, len) end
-    UI_GET_VERSION = Ioctl.IOR(UINPUT_IOCTL_BASE, 301, :uint)
+    def self.UI_GET_SYSNAME(len) Ioctl.IOC(Ioctl::IOC_READ, UINPUT_IOCTL_BASE, 44, len) end
+    UI_GET_VERSION = Ioctl.IOR(UINPUT_IOCTL_BASE, 45, :uint)
   end
 end
